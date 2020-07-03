@@ -23,3 +23,32 @@ import pandas as pd
 from matplotlib import pyplot as plt
 import seaborn as sns
 
+dataset = pd.read_csv('/kaggle/input/daily-temperature-of-major-cities/city_temperature.csv')
+
+temp = [dataset]
+
+dataset.describe()
+dataset
+
+dataset.info()
+
+dataset.tail(15)
+
+dataset.isnull().sum()
+
+dataset = dataset.drop('State', axis=1)
+
+dataset.isnull().sum()
+
+dataset['Region'].value_counts()
+
+temp=[dataset]
+
+dataset['AvgTemperature']= (dataset.AvgTemperature-32)*5/9
+
+sns.distplot(dataset['AvgTemperature'])
+
+sns.distplot(dataset['Month'])
+
+sns.distplot(dataset['Day'])
+
