@@ -1,3 +1,3 @@
 # Hasib-Portfolio
-Data Analysis Projects 
+Academic Projects
 
